@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Minitest</title>
+ <style>
+body {
+  font-family: 'monospace', cursive;
+  font-size: 20px;
+  font-weight: 300;
+  background-color: #405E39;
+}
+.wrapper {
+  max-width: 75%;
+  width: 100%;
+  margin: 50px auto;
+}
+.question {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 2em;
+}
+.question.error {
+  background-color: #e74c3c;
+}
+.question.success {
+  background-color: #2ecc71;
+}
+.question .question-headline {
+  font-weight: 700;
+  border-bottom: 2px solid #ddd;
+  font-size: 1.3em;
+  color: #000;
+}
+.question .question-answers {
+  margin-top: 1em;
+  color: #222;
+}
+.question .question-answers .answer + .answer {
+  margin-top: .5em;
+}
+.question .question-answers .answer input {
+  display: inline-block;
+  margin-right: 1em;
+}
+.question .question-answers .answer label {
+  cursor: pointer;
+}
+.result {
+  margin-bottom: 2em;
+  font-size: 1.2em;
+  background-color: #3498db;
+  border-radius: 10px;
+  padding: 10px 20px;
+  display: none;
+}
+.btn-check {
+  padding: 10px 20px;
+  background-color: #2ecc71;
+  color: #fff;
+  font-family: 'Dancing Script', cursive;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+.btn-check:hover {
+  background-color: #1b7943;
+}
+a{
+  color: white;
+  text-decoration: none;
+}
+a:hover{
+  color: black;
+  text-decoration: none;
+}
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.glyphicon-share-alt:before {
+  content: "\e095";
+}
+.glyphicon-arrow-up:before {
+  content: "\e093";
+}
+.back{
+    font-size: 20px;
+    padding-left: 3%;
+    padding-bottom: 10px;
+}
+.fix{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+h1{
+    font-size: 60px;
+    padding-top: 30px;
+    text-align: center;
+    color: white;
+}
+
+
+</style>
+</head>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<body>
+  <div class="btn back">
+    <a href="meniu+search.html" >Home</a>
+    </div>
+    <h1>Minitest</h1>
+    
+      <div class='wrapper'>
+
+        <div class='question'>
+
+            <div class='question-headline'>
+            1.Sa se rezolve inecuatia (x<sup>2</sup>-5x)(x<sup>2</sup>-6x+8) ≤ 0  
+            </div>
+
+            <div class='question-answers'>
+                <div class='answer'>
+                    <input id='q1a1' name='question-1' type='radio' value='true'><label for="q1a1">x∈[0,2] U [4,5]</label></input>
+                </div>
+                <div class='answer'>
+                    <input id='q1a2' name='question-1' type='radio' value='false'><label for="q1a2">x∈(2,4)</label></input>
+                </div>
+                <div class='answer'>
+                    <input id='q1a3' name='question-1' type='radio' value='false'><label for="q1a3">x∈(0,2) U (4,5)</label></input>
+                </div>
+            </div>
+
+        </div>
+
+        <div class='question'>
+
+            <div class='question-headline'>
+            2.Sa se determine punctele M(x,y) in care functiile f(x)=e<sup>x</sup>-1, g(x)=ln(x+1),
+            x ∈ (0,∞) sunt tangente.
+            </div>
+
+            <div class='question-answers'>
+                <div class='answer'>
+                    <input id='q2a1' name='question-2' type='radio' value='false'><label for="q2a1">M(0,1)</label></input>
+                </div>
+                <div class='answer'>
+                    <input id='q2a2' name='question-2' type='radio' value='true'><label for="q2a2">M(0,0)</label></input>
+                </div>
+                <div class='answer'>
+                    <input id='q2a3' name='question-2' type='radio' value='false'><label for="q2a3">M(1,1)</label></input>
+                </div>
+            </div>
+
+        </div>
+
+        <div class='question'>
+
+            <div class='question-headline'>
+            3.Tangenta la curba y=x<sup>2</sup>-x in punctul A(1,0) are ecuatia: 
+            </div>
+
+            <div class='question-answers'>
+                <div class='answer'>
+                    <input id='q3a1' name='question-3' type='radio' value='true'><label for="q3a1">y = x-1</label></input>
+                </div>
+                <div class='answer'>
+                    <input id='q3a2' name='question-3' type='radio' value='false'><label for="q3a2">y = x+2</label></input>
+                </div>
+                <div class='answer'>
+                    <input id='q3a3' name='question-3' type='radio' value='false'><label for="q3a3">y = 1-x</label></input>
+                </div>
+            </div>
+
+        </div>
+
+        <div class='question'>
+
+            <div class='question-headline'>
+            4.Produsul solutiilor ecuatiei 2x<sup>2</sup>-5x+2=0 este:
+            </div>
+
+            <div class='question-answers'>
+                <div class='answer'>
+                    <input id='q4a1' name='question-4' type='radio' value='true'><label for="q4a1">1</label></input>
+                </div>
+                <div class='answer'>
+                    <input id='q4a2' name='question-4' type='radio' value='false'><label for="q4a2">5/2</label></input>
+                </div>
+                <div class='answer'>
+                    <input id='q4a3' name='question-4' type='radio' value='false'><label for="q4a3">-5/2</label></input>
+                </div>
+            </div>
+
+        </div>
+
+        <div class='question'>
+
+            <div class='question-headline'>
+            5.Sa se determine varful D al paralelogramului ABCD, cunoscandu-se A(0,0), B(0,3), C(2,5). 
+            </div>
+
+            <div class='question-answers'>
+                <div class='answer'>
+                    <input id='q5a1' name='question-5' type='radio' value='true'><label for="q5a1">D(2,2)</label></input>
+                </div>
+                <div class='answer'>
+                    <input id='q5a2' name='question-5' type='radio' value='false'><label for="q5a2">D(-2,2)</label></input>
+                </div>
+                <div class='answer'>
+                    <input id='q5a3' name='question-5' type='radio' value='false'><label for="q5a3">D(2,1)</label></input>
+                </div>
+            </div>
+
+        </div>
+       
+        <div class='result'></div>
+        <button class='btn-check'>Verifica Test</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script>
+     
+(function() {
+  var quiz;
+
+  $(document).ready(function() {
+    return quiz.init();
+  });
+
+  quiz = {
+    init: function() {
+      return this.bind_events();
+    },
+    bind_events: function() {
+      return $(document).on("click", ".btn-check", function(e) {
+        return quiz.check();
+      });
+    },
+    check: function() {
+      var correct, i, incorrect;
+      i = 1;
+      correct = 0;
+      incorrect = 0;
+      $(".question").each(function() {
+        var checked_count, correct_checked, correct_count, val;
+        val = $("input:radio[name='question-" + i + "']:checked").val();
+        correct_count = 0;
+        correct_checked = 0;
+        checked_count = 0;
+        $("input:checkbox[name='question-" + i + "']").each(function() {
+          if ($(this).attr("value") === "true") {
+            correct_count++;
+            if ($(this).is(":checked")) {
+              correct_checked++;
+            }
+          }
+          if ($(this).is(":checked")) {
+            return checked_count++;
+          }
+        });
+        if (correct_count > 0 && correct_count === correct_checked && checked_count === correct_count) {
+          val = "true";
+        }
+        $(this).removeClass("success error");
+        if (val === "true") {
+          $(this).addClass("success");
+          correct++;
+        } else {
+          $(this).addClass("error");
+          incorrect++;
+        }
+        return i++;
+      });
+      return $(".result").html("Ai <strong>" + correct + " r&#259;spunsuri </strong> corecte &#537;i <strong>" + incorrect + " incorecte</strong>.").show();
+    }
+  };
+
+}).call(this);
+    </script>
+    </body>
+    </html>
